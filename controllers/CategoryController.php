@@ -30,7 +30,7 @@ class CategoryController extends AppController
         $products = $query->offset($pages->offset)->limit($pages->limit)->all();
 
         $category = Category::findOne($id);
-        $this->setMeta('E-SHOPPER |'. $category->name, $category->keywords, $category->description);
+        $this->setMeta('E-SHOPPER | '. $category->name, $category->keywords, $category->description);
         return $this->render('view', compact('products', 'pages', 'category'));
     }
 
