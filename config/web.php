@@ -11,6 +11,7 @@ $config = [
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',
+            'layout' => 'admin',
         ],
     ],
     'components' => [
@@ -25,6 +26,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+        //    'loginUrl' => 'cart',
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
